@@ -15,7 +15,6 @@ export default function DashboardPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
-  // Check for authentication when the component loads
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     if (!token) {
@@ -86,7 +85,6 @@ export default function DashboardPage() {
     toast.success("Item deleted");
   };
 
-  // If not authenticated, show nothing (redirect happens automatically)
   if (!isAuthenticated) {
     return null;
   }
@@ -98,13 +96,13 @@ export default function DashboardPage() {
           <h2 className="text-3xl font-semibold text-gray-800">Dashboard</h2>
           <div className="flex space-x-4">
             <button
-              onClick={() => setIsModalOpen(true)} // Open modal for adding new item
+              onClick={() => setIsModalOpen(true)} 
               className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
             >
               Add Item
             </button>
             <button
-              onClick={logout} // Call logout function when clicking "Logout"
+              onClick={logout} 
               className="px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
             >
               Logout
@@ -149,7 +147,7 @@ export default function DashboardPage() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       <button
-                        onClick={() => handleEdit(item)} // Open the edit modal with current data
+                        onClick={() => handleEdit(item)} 
                         className="text-blue-600 hover:text-blue-800 mr-4"
                       >
                         Edit
@@ -168,7 +166,7 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {/* Modal for adding new item */}
+        
         {isModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
             <div className="bg-white p-6 rounded-lg shadow-lg w-96">
@@ -213,7 +211,7 @@ export default function DashboardPage() {
               </div>
               <div className="mt-4 flex justify-end space-x-4">
                 <button
-                  onClick={() => setIsModalOpen(false)} // Close the modal
+                  onClick={() => setIsModalOpen(false)} \
                   className="px-4 py-2 text-gray-600 bg-gray-200 rounded-md hover:bg-gray-300"
                 >
                   Cancel
@@ -229,7 +227,7 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {/* Edit Modal */}
+        {/* Editing tab */}
         {isEditModalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
             <div className="bg-white p-6 rounded-lg shadow-lg w-96">
@@ -280,7 +278,7 @@ export default function DashboardPage() {
               </div>
               <div className="mt-4 flex justify-end space-x-4">
                 <button
-                  onClick={() => setIsEditModalOpen(false)} // Close the edit modal
+                  onClick={() => setIsEditModalOpen(false)} 
                   className="px-4 py-2 text-gray-600 bg-gray-200 rounded-md hover:bg-gray-300"
                 >
                   Cancel
