@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+
+#Install dependencies 
+Axios
+react-toastify
+react-icons
+
 ## Getting Started
 
 First, run the development server:
@@ -20,7 +27,3 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-#Install dependencies 
-Axios
-react-toastify
-react-icons
